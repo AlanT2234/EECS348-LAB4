@@ -24,7 +24,7 @@ int main() {
 					       for (int FG = 0; FG *3+ TDPlus2*8 + TDPlus1*7+ TDNoExtra*6<=Score ; FG++) {	
 						       int last = Score - (8*TDPlus2 + 7*TDPlus1 + 6*TDNoExtra + 3*FG);
 						       if (last%2 == 0) {
-							       int Safety = last / 2
+							       int Safety = last / 2;
 							       printf("%d TD + 2Pt, %d TD +FG, %d TD, %d 3PT FG, %d Safety\n", TDPlus2, TDPlus1, TDNoExtra, FG, Safety);
 							       found=1;
 						       }
@@ -33,9 +33,10 @@ int main() {
 				}
 			}
 			if (!found) {
-				printf("No possible combos")
+				printf("No possible combos.\n");
+			}
 		}
 	}
-	return 0
+	return 0;
 }
 		
