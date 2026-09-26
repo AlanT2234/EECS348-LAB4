@@ -1,19 +1,16 @@
-CC = gcc
-CFLAGS = -c -Wall
+all: task1 task2
 
-all: prog 
+task1: task1.o
+	$(CC) task1.o -o task1
 
-prog:  task1.o task2.o 
-	$(CC)  task1.o task2.o -o prog
+task2: task2.o
+	$(CC) task2.o -o task2
 
-
-
-task1.o: isEven.c
+task1.o: task1.c
 	$(CC) $(CFLAGS) task1.c
 
-task2.o: isOdd.c
+task2.o: task2.c
 	$(CC) $(CFLAGS) task2.c
 
 clean:
-	rm -rf *.o prog
-
+	rm -rf *.o task1 task2
